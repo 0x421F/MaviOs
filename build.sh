@@ -84,7 +84,7 @@ build_busybox() {
 # Install core
 build_rootfs() {
   cd $PWD_DIR
-  wget
+  wget https://github.com/0x421F/MaviOs/releases/download/0.1/root.zip
   unzip root.zip
   cd $MAVI_DIR
   rm -rf rootfs
