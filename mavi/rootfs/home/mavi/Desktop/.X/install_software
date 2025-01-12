@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Cool Retro Term
+wget --no-check-certificate -O crt https://github.com/Swordfish90/cool-retro-term/releases/download/1.1.1/Cool-Retro-Term-1.1.1-x86_64.AppImage
+sudo chmod +x crt
+./crt --appimage-extract
+rm crt
+mv /home/msmd/squashfs-root /home/msmd/cool-retro-term
+echo "#!/bin/sh" > crt
+echo "LD_LIBRARY_PATH=/home/msmd/cool-retro-term/usr/lib:$LD_LIBRARY_PATH QT_XKB_CONFIG_ROOT=/usr/local/share/X11/xkb /home/msmd/cool-retro-term/AppRun" >> crt
+sudo chmod +x crt
+sudo mv crt /usr/local/bin/cool-retro-term
+
+# Stotcut
+wget --no-check-certificate -O shotcut https://github.com/mltframework/shotcut/releases/download/v19.08.16/Shotcut-190816.glibc2.14-x86_64.AppImage
+sudo chmod +x shotcut
+./shotcut --appimage-extract
+rm shotcut
+mv /home/msmd/squashfs-root /home/msmd/Shotcut
+dipi libgpg-error
+
+# Simple Screen Recorder
+dipi simplescreenrecorder
+
+# Python
+dipi python3.9
+sudo tar -C /usr/local/share/python3.9/files -xvf /usr/local/share/python3.9/files/files.tar.gz
+sudo cp /usr/local/share/python3.9/files/usr/local/bin/* /usr/local/bin/
