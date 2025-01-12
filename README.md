@@ -39,7 +39,7 @@ Bu teknolojiler bir araya gelerek hafif, hızlı ve özelleştirilebilir bir sis
 
 ## Kurulum
 
-1. **Depoyu Klonlayın:**
+1. **Repoyu Klonlayın:**
 
    ```bash
    git clone https://github.com/0x421F/MaviOs.git
@@ -61,7 +61,7 @@ Bu teknolojiler bir araya gelerek hafif, hızlı ve özelleştirilebilir bir sis
 
 ### 1. **Hazır ISO Dosyasını Çalıştırma:**
 
-Depoda bulunan `mavi.iso` dosyasını ve `run.sh` betiğini kullanarak sistemi başlatabilirsiniz:
+Repoda bulunan `mavi.iso` dosyasını ve `run.sh` betiğini kullanarak sistemi başlatabilirsiniz:
 
 ```bash
 chmod +x run.sh
